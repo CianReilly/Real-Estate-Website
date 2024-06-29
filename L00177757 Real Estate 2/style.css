@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+/*style the top navigation bar so the the dropdown will show and
+it is on the bottom of the header*/
+.topnav {
+  background-color: #4f6367;
+  overflow: visible;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family:Verdana;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #ee6c4d;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.listings {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.listings .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: Verdana;
+  padding: 0, 16px;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.listings-content {
+  display: none;
+  position: absolute;
+  background-color: #4f6367;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.listings-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background on topnav links and the dropdown button on hover */
+.topnav a:hover, .listings:hover .dropbtn {
+  background-color: #adbbe0;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.listings-content a:hover {
+  background-color: #adbbe0;
+  color: white;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.listings:hover .listings-content {
+  display: block;}
+
+main {
+	background-color: white; padding: 50px; margin: 0px,2px;
+}
+
+/* Style the footer to be width of the page and have white border and keep all overflow inside the footer*/
+footer {
+	background-color: #4f6367; 
+	height: 70px; 
+	width:100%; 
+	padding: 10px;  
+	border: solid 5px white;
+	overflow: auto;
+	
+}
+/*float the copyright and logo links left anf right*/
+.copyright {
+	float: left
+}
+
+.footer-content {
+	float: right;
+}
+
+.footer-content a{
+	text-align: center;
+}
+/* style the logo links*/
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+/*add grey background to body*/
+body { 
+	background-color: #4f6367;
+	padding: 0 50px;
+}
+/* add the background header image that goes across whole width of screen*/
+header {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  
+  border: solid 5px white;
+  background-color: #eee;
+  background-image: url('Banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+header img {
+  display: none;
+  
+}
+
+h1 {
+    margin: 0;
+}
+/*style the header all properties*/
+h2 { text-align: center; 
+	font-size: 30px; 
+	font-family: Verdana;
+	color: #4f6367;}
+/*style the container for the cards*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+/* style the cards*/
+.card {
+	
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 25%;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 10px;
+}
+/* style the more details button*/
+.card .button {
+  font-size: 15px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #ee6c4d;
+  font-family: Verdana;
+  text-decoration: none;
+  margin: 0;
+}
+
+.card hr {
+        border: none;
+        border-top: 1px solid black;
+        margin: 20px 10px;
+        
+      }
+/*add padding to image holder on the cards*/
+.image-holder {padding: 20px;   }
+/* add border to the card image */
+img {
+  border-radius: 5px 5px 5px 5px;
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+/*make card images opaque when hover over*/
+img:hover {opacity: 0.5; transition: 0.9s}  
+/*add wrapper*/
+#wrapper{margin: 0 auto; width: 80%;}
+/*add styles for different size screens*/
+@media only screen and (max-width: 1024px) {
+	  .card {width: 30%;}
+}
+
+@media only screen and (max-width: 768px) {
+	  .card {width: 40%;}
+}
+
+ @media only screen and (max-width: 600px) {
+      .card {width: 90%;}
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .listings {float: none;}
+  .topnav.responsive .listings-content {position: relative;}
+  .topnav.responsive .listings .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
